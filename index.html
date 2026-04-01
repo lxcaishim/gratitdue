@@ -66,13 +66,20 @@
             <i class="fa-brands fa-x-twitter"></i>
             X
           </a>
-          <a class="btn btn-secondary" href="#" aria-label="Bino button">
-            <i class="fa-solid fa-rocket"></i>
-            Bino
+          <a
+            class="btn btn-secondary"
+            id="buyBtn"
+            href="https://pump.fun"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Buy on Pump.fun (opens in new tab)"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>
+            Buy
           </a>
           <button class="btn btn-ghost" id="copyCaBtn" type="button" aria-label="Copy contract address">
             <i class="fa-regular fa-copy"></i>
-            CA: TBD
+            <span id="caLabel">CA: TBD</span>
           </button>
           <span id="copyStatus" class="copy-status" aria-live="polite"></span>
         </div>
@@ -82,18 +89,46 @@
 
     <section class="ticker-wrap" aria-label="Dynamic banner">
       <div class="ticker-track">
-        <span>GRATITUDE</span>
-        <span>POSITIVITY</span>
-        <span>COMMUNITY</span>
-        <span>MOMENTUM</span>
-        <span>CLARITY</span>
-        <span>RESILIENCE</span>
-        <span>GRATITUDE</span>
-        <span>POSITIVITY</span>
-        <span>COMMUNITY</span>
-        <span>MOMENTUM</span>
-        <span>CLARITY</span>
-        <span>RESILIENCE</span>
+        <div class="ticker-set">
+          <span>GRATITUDE</span>
+          <span>POSITIVITY</span>
+          <span>COMMUNITY</span>
+          <span>MOMENTUM</span>
+          <span>CLARITY</span>
+          <span>RESILIENCE</span>
+          <span>GRATITUDE</span>
+          <span>POSITIVITY</span>
+          <span>COMMUNITY</span>
+          <span>MOMENTUM</span>
+          <span>CLARITY</span>
+          <span>RESILIENCE</span>
+          <span>GRATITUDE</span>
+          <span>POSITIVITY</span>
+          <span>COMMUNITY</span>
+          <span>MOMENTUM</span>
+          <span>CLARITY</span>
+          <span>RESILIENCE</span>
+        </div>
+        <div class="ticker-set" aria-hidden="true">
+          <span>GRATITUDE</span>
+          <span>POSITIVITY</span>
+          <span>COMMUNITY</span>
+          <span>MOMENTUM</span>
+          <span>CLARITY</span>
+          <span>RESILIENCE</span>
+          <span>GRATITUDE</span>
+          <span>POSITIVITY</span>
+          <span>COMMUNITY</span>
+          <span>MOMENTUM</span>
+          <span>CLARITY</span>
+          <span>RESILIENCE</span>
+          <span>GRATITUDE</span>
+          <span>POSITIVITY</span>
+          <span>COMMUNITY</span>
+          <span>MOMENTUM</span>
+          <span>CLARITY</span>
+          <span>RESILIENCE</span>
+        </div>
       </div>
     </section>
 
@@ -213,6 +248,7 @@
         </a>
         <a
           class="footer-logo-link footer-pump"
+          id="footerPump"
           href="https://pump.fun"
           target="_blank"
           rel="noopener noreferrer"

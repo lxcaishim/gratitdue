@@ -205,12 +205,20 @@ main,
 
 .ticker-track {
   display: flex;
+  flex-wrap: nowrap;
   width: max-content;
-  animation: tickerMove 26s linear infinite;
-  white-space: nowrap;
+  animation: tickerMove 28s linear infinite;
+  will-change: transform;
 }
 
-.ticker-track span {
+.ticker-set {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.ticker-set span {
   display: inline-flex;
   align-items: center;
   font-family: "Bebas Neue", "Orbitron", sans-serif;
@@ -218,9 +226,10 @@ main,
   letter-spacing: 1.6px;
   color: #a6e8ff;
   padding: 0.45rem 1.1rem;
+  white-space: nowrap;
 }
 
-.ticker-track span::after {
+.ticker-set span::after {
   content: "•";
   margin-left: 1.1rem;
   color: rgba(149, 221, 255, 0.45);
@@ -634,9 +643,10 @@ textarea:focus {
 
 .social-logos {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
 }
 
