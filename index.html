@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gratitude | A Better Daily Mindset</title>
+    <meta
+      name="description"
+      content="A professional gratitude website with a science-inspired blue theme, animated hero, and guided daily reflection prompts."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-noise" aria-hidden="true"></div>
+    <div class="orb orb-one" aria-hidden="true"></div>
+    <div class="orb orb-two" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top">GRATITUDE</a>
+      <nav class="nav-links">
+        <a href="#meaning">Lore</a>
+        <a href="#prompts">Prompts</a>
+        <a href="#chart">Chart</a>
+        <a href="#tokenomics">Tokenomics</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-media" aria-hidden="true">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="./hero-brain.png"
+        >
+          <source src="./hero-video.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">GRATITUDE</h1>
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#" aria-label="X button">
+            <i class="fa-brands fa-x-twitter"></i>
+            X
+          </a>
+          <a class="btn btn-secondary" href="#" aria-label="Bino button">
+            <i class="fa-solid fa-rocket"></i>
+            Bino
+          </a>
+          <button class="btn btn-ghost" id="copyCaBtn" type="button" aria-label="Copy contract address">
+            <i class="fa-regular fa-copy"></i>
+            CA: TBD
+          </button>
+          <span id="copyStatus" class="copy-status" aria-live="polite"></span>
+        </div>
+      </div>
+      <div class="hero-scanline" aria-hidden="true"></div>
+    </section>
+
+    <main>
+      <section class="ticker-wrap" aria-label="Dynamic banner">
+        <div class="ticker-track">
+          <span>GRATITUDE</span>
+          <span>POSITIVITY</span>
+          <span>COMMUNITY</span>
+          <span>MOMENTUM</span>
+          <span>CLARITY</span>
+          <span>RESILIENCE</span>
+          <span>GRATITUDE</span>
+          <span>POSITIVITY</span>
+          <span>COMMUNITY</span>
+          <span>MOMENTUM</span>
+          <span>CLARITY</span>
+          <span>RESILIENCE</span>
+        </div>
+      </section>
+
+      <section id="meaning" class="section section-clean">
+        <h2 class="display-heading"><i class="fa-solid fa-lightbulb"></i> Lore</h2>
+        <div class="lore-box">
+          <p>
+            Gratitude is the intentional recognition of value in your life. It can
+            come from relationships, progress, health, opportunities, or small
+            moments of peace.
+          </p>
+          <p>
+            Practicing gratitude does not ignore hard things. It helps balance
+            your perspective so stress is not the only signal your brain tracks.
+          </p>
+        </div>
+      </section>
+
+      <section id="prompts" class="section section-clean prompts-compact">
+        <h2 class="display-heading"><i class="fa-solid fa-pen-to-square"></i> Quick Daily Prompts</h2>
+        <p class="section-intro">
+          Use one prompt, then write three things that went well and why they
+          mattered.
+        </p>
+
+        <div class="prompt-toolbar">
+          <button class="btn btn-secondary" id="promptBtn" type="button">
+            <i class="fa-solid fa-shuffle"></i>
+            New Prompt
+          </button>
+          <p id="promptText" class="prompt-pill"></p>
+        </div>
+
+        <form id="journalForm" class="journal-grid">
+          <label>
+            <span>1. What went well?</span>
+            <textarea id="entryOne" rows="3" placeholder="Write your first win..."></textarea>
+          </label>
+          <label>
+            <span>2. What went well?</span>
+            <textarea id="entryTwo" rows="3" placeholder="Write your second win..."></textarea>
+          </label>
+          <label>
+            <span>3. What went well?</span>
+            <textarea id="entryThree" rows="3" placeholder="Write your third win..."></textarea>
+          </label>
+          <div class="journal-actions">
+            <button class="btn btn-primary" id="saveBtn" type="submit">
+              <i class="fa-solid fa-floppy-disk"></i>
+              Save Reflection
+            </button>
+            <button class="btn btn-ghost" id="clearBtn" type="button">
+              <i class="fa-solid fa-trash"></i>
+              Clear
+            </button>
+            <p id="saveStatus" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+
+      <section id="chart" class="section section-clean">
+        <h2 class="display-heading"><i class="fa-solid fa-chart-line"></i> Live Chart</h2>
+        <p class="section-intro">
+          Dexscreener widget placeholder. Once you give me the CA/pair, I will wire this to the live chart.
+        </p>
+        <p class="dex-link-wrap">
+          <a class="dex-link" href="https://dexscreener.com" target="_blank" rel="noreferrer">Open DexScreener</a>
+        </p>
+        <div class="chart-shell">
+          <iframe
+            id="dexscreenerEmbed"
+            title="Dexscreener Chart Placeholder"
+            src="https://dexscreener.com"
+            loading="lazy"
+          ></iframe>
+          <div class="chart-overlay">
+            <p>Waiting for contract address (CA)</p>
+            <small>Widget will go live after CA is provided.</small>
+          </div>
+        </div>
+      </section>
+
+      <section id="tokenomics" class="section section-clean">
+        <h2 class="display-heading"><i class="fa-solid fa-coins"></i> Tokenomics</h2>
+        <div class="token-pills">
+          <div class="token-pill">
+            <p class="token-label token-label-supply">Supply</p>
+            <p class="token-value">1 billion tokens</p>
+          </div>
+          <div class="token-pill">
+            <p class="token-label token-label-tax">Tax</p>
+            <p class="token-value">0%</p>
+          </div>
+          <div class="token-pill">
+            <p class="token-label token-label-status">Status</p>
+            <p class="token-value">Live on PumpFun</p>
+          </div>
+          <div class="token-pill">
+            <p class="token-label token-label-network">Network</p>
+            <p class="token-value">Solana</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="social-logos" aria-label="Social logos">
+        <span class="logo-item" aria-label="X"><i class="fa-brands fa-x-twitter"></i></span>
+        <span class="logo-item logo-pump" aria-label="pump.fun"><i class="fa-solid fa-bolt"></i> pump.fun</span>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
