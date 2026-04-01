@@ -37,24 +37,32 @@
 
     <section class="hero" id="top">
       <div class="hero-media" aria-hidden="true">
-        <video
-          class="hero-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          poster="./hero-brain.png"
-        >
-          <source src="./hero-video.mp4" type="video/mp4" />
-        </video>
+        <div class="hero-video-frame">
+          <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="./hero-brain.png"
+          >
+            <source src="./hero-video.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
       <div class="hero-vignette" aria-hidden="true"></div>
       <div class="hero-content">
         <h1 class="hero-title">GRATITUDE</h1>
 
         <div class="hero-buttons">
-          <a class="btn btn-primary" href="#" aria-label="X button">
+          <a
+            class="btn btn-primary"
+            href="https://x.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X (opens in new tab)"
+          >
             <i class="fa-brands fa-x-twitter"></i>
             X
           </a>
@@ -72,24 +80,24 @@
       <div class="hero-scanline" aria-hidden="true"></div>
     </section>
 
-    <main>
-      <section class="ticker-wrap" aria-label="Dynamic banner">
-        <div class="ticker-track">
-          <span>GRATITUDE</span>
-          <span>POSITIVITY</span>
-          <span>COMMUNITY</span>
-          <span>MOMENTUM</span>
-          <span>CLARITY</span>
-          <span>RESILIENCE</span>
-          <span>GRATITUDE</span>
-          <span>POSITIVITY</span>
-          <span>COMMUNITY</span>
-          <span>MOMENTUM</span>
-          <span>CLARITY</span>
-          <span>RESILIENCE</span>
-        </div>
-      </section>
+    <section class="ticker-wrap" aria-label="Dynamic banner">
+      <div class="ticker-track">
+        <span>GRATITUDE</span>
+        <span>POSITIVITY</span>
+        <span>COMMUNITY</span>
+        <span>MOMENTUM</span>
+        <span>CLARITY</span>
+        <span>RESILIENCE</span>
+        <span>GRATITUDE</span>
+        <span>POSITIVITY</span>
+        <span>COMMUNITY</span>
+        <span>MOMENTUM</span>
+        <span>CLARITY</span>
+        <span>RESILIENCE</span>
+      </div>
+    </section>
 
+    <main>
       <section id="meaning" class="section section-clean">
         <h2 class="display-heading"><i class="fa-solid fa-lightbulb"></i> Lore</h2>
         <div class="lore-box">
@@ -193,9 +201,33 @@
     </main>
 
     <footer class="site-footer">
-      <div class="social-logos" aria-label="Social logos">
-        <span class="logo-item" aria-label="X"><i class="fa-brands fa-x-twitter"></i></span>
-        <span class="logo-item logo-pump" aria-label="pump.fun"><i class="fa-solid fa-bolt"></i> pump.fun</span>
+      <div class="social-logos" aria-label="Social and launch links">
+        <a
+          class="footer-logo-link"
+          href="https://x.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X"
+        >
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        </a>
+        <a
+          class="footer-logo-link footer-pump"
+          href="https://pump.fun"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="pump.fun"
+        >
+          <img
+            class="pump-logo-img"
+            src="https://pump.fun/favicon.ico"
+            alt=""
+            width="26"
+            height="26"
+            decoding="async"
+          />
+          <span class="pump-logo-text">pump.fun</span>
+        </a>
       </div>
     </footer>
 
