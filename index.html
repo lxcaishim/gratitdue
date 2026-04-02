@@ -197,19 +197,20 @@
       <section id="chart" class="section section-clean">
         <h2 class="display-heading"><i class="fa-solid fa-chart-line"></i> Live Chart</h2>
         <p class="section-intro">
-          Dexscreener widget placeholder. Once you give me the CA/pair, I will wire this to the live chart.
+          Live Solana pair chart via DexScreener for the Gratitude token.
         </p>
         <p class="dex-link-wrap">
-          <a class="dex-link" href="https://dexscreener.com" target="_blank" rel="noreferrer">Open DexScreener</a>
+          <a class="dex-link" id="dexScreenerLink" href="https://dexscreener.com" target="_blank" rel="noreferrer"
+            >Open DexScreener</a
+          >
         </p>
         <div class="chart-shell">
           <iframe
             id="dexscreenerEmbed"
-            title="Dexscreener Chart Placeholder"
-            src="https://dexscreener.com"
+            title="Gratitude token on DexScreener"
             loading="lazy"
           ></iframe>
-          <div class="chart-overlay">
+          <div class="chart-overlay" id="chartOverlay" hidden>
             <p>Waiting for contract address (CA)</p>
             <small>Widget will go live after CA is provided.</small>
           </div>
